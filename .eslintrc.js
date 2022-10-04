@@ -19,9 +19,9 @@ module.exports = {
         "@typescript-eslint", "prettier"
     ],
     "rules": {
-        'prettier/prettier': 2,
+        'prettier/prettier': 1,
         quotes:['error', 'single'],
-        'no-console':1,
+        //'no-console':1,
         'no-var':'error',
         'prefer-const':'error'
     }
