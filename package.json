@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/David-Alfons/store#readme",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.14",
     "@types/jasmine": "^4.3.0",
     "@types/pg": "^8.6.5",
@@ -42,6 +43,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "db-migrate": "^0.11.13",
     "db-migrate-pg": "^1.2.2",
     "dotenv": "^16.0.3",

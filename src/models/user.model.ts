@@ -1,6 +1,12 @@
 import db from '../database';
 import User from '../types/user.type';
+import config from '../config';
+import bcrypt from 'bcrypt';
 
+const hashPassword =(password :string)=> {
+  const salt = parseInt(config.salt as string);
+  return bcrypt.hashSync(`${password}${config.pepper}`, salt);
+}
 class UserModel {
   // creating all required functions for User Model ,{ create user ,get user, ......}
 
@@ -14,7 +20,7 @@ class UserModel {
         user.user_name,
         user.first_name,
         user.last_name,
-        user.password,
+        hashPassword(user.password),
       ]);
       connection.release();
       return result.rows[0];
@@ -62,7 +68,7 @@ class UserModel {
         user.user_name,
         user.first_name,
         user.last_name,
-        user.password,
+        hashPassword(user.password),
         user.id,
       ]);
       connection.release();

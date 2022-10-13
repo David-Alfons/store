@@ -13,7 +13,7 @@ export const create = async (
     res.json({
       status: 'success',
       data: { ...user },
-      message: 'Hello World from users',
+      message: 'user created',
     });
   } catch (error) {
     next(error);
@@ -30,7 +30,7 @@ export const getAllUsers = async (
     res.json({
       status: 'success',
       data: users,
-      message: 'Hello World from users',
+      message: 'All the users are here',
     });
   } catch (error) {
     next(error);
@@ -49,7 +49,7 @@ export const getUserById = async (
     res.json({
       status: 'success',
       data: user,
-      message: 'Hello World from email',
+      message: 'the requierd user is here',
     });
   } catch (error) {
     next(error);
@@ -66,7 +66,7 @@ export const updateUserById = async (
     res.json({
       status: 'success',
       data: user,
-      message: 'Hello World from update',
+      message: 'the user updated ',
     });
   } catch (error) {
     next(error);
@@ -85,7 +85,7 @@ export const deleteUserById = async (
     res.json({
       status: 'success',
       data: user,
-      message: 'Hello World from email',
+      message: 'the user deleted',
     });
   } catch (error) {
     next(error);
